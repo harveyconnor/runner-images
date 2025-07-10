@@ -267,12 +267,6 @@ build {
     script          = "${path.root}/../scripts/build/Configure-Xcode-Simulators.ps1"
   }
 
-  provisioner "file" {
-    destination = "${path.root}/../../image-output/"
-    direction   = "download"
-    source      = "${local.image_folder}/output/"
-  }
-
   provisioner "shell" {
     execute_command = "chmod +x {{ .Path }}; source $HOME/.bash_profile; {{ .Vars }} {{ .Path }}"
     scripts         = [

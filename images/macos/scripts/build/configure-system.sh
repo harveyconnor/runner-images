@@ -40,8 +40,9 @@ if is_SonomaX64 || is_VenturaX64 || is_SequoiaX64; then
     brew uninstall parallels
 fi
 
-echo "Put documentation to $HOME root"
-cp $HOME/image-generation/output/software-report/systeminfo.* $HOME/
+# Commented this out as it was producing errors
+# echo "Put documentation to $HOME root"
+# cp $HOME/image-generation/output/software-report/systeminfo.* $HOME/
 
 echo "Remove fastlane cached cookie"
 rm -rf ~/.fastlane
